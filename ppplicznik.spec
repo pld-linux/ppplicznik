@@ -1,7 +1,7 @@
 Summary:	A modem connection timer
 Summary(pl):	Licznik czasu po³±czenia modemowego
 Name:		ppplicznik
-Version:	0.4.0
+Version:	1.0.0
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
@@ -37,11 +37,6 @@ wszystkie po³±czenia zapisane w pliku lub tylko te z danego miesi±ca.
 %patch0 -p1
 
 %build
-# gettextize -f
-# aclocal
-# autoconf
-# autoheader
-# automake -a
 %configure
 %{__make}
 
@@ -53,11 +48,11 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_datadir}/%{name}} \
 install src/ppplicznik $RPM_BUILD_ROOT%{_bindir}
 install misc/sound.wav $RPM_BUILD_ROOT%{_datadir}/ppplicznik
 install misc/ppplicznik.1 $RPM_BUILD_ROOT%{_mandir}/man1
-install misc/pl/ppplicznik.1 $RPM_BUILD_ROOT%{_mandir}/pl/man1
+# install misc/pl/ppplicznik.1 $RPM_BUILD_ROOT%{_mandir}/pl/man1
 sed s/"\/usr\/local\/share"/"\/usr\/share"/ < misc/ppplicznik.conf > $RPM_BUILD_ROOT%{_sysconfdir}/ppplicznik.conf
 install po/pl.gmo $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES/%{name}.mo
 
-gzip -9nf AUTHORS ChangeLog INSTALL* NEWS README
+gzip -9nf AUTHORS ChangeLog NEWS 
 
 %find_lang %{name}
 
@@ -71,4 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/ppplicznik
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/%{name}.conf
 %{_mandir}/man1/*
-%lang(pl) %{_mandir}/pl/man1/*
+# %lang(pl) %{_mandir}/pl/man1/*
