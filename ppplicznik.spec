@@ -7,6 +7,7 @@ License:	GPL
 Group:		Networking/Utilities
 URL:		http://gruesome.republika.pl/
 Source0:	http://gruesome.republika.pl/%{name}-%{version}.tar.bz2
+# Source0-md5:	1818a46fcc350e1c47bc2f1242a3e6b5
 Patch0:		ppplicznik-ncurses-path.patch
 BuildRequires:	gettext-devel
 BuildRequires:	libstdc++-devel
