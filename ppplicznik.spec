@@ -19,21 +19,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 ppplicznik is a program which during modem connection lets you to
-control it's remaining time and amount of received data. Information
+control it's remaining time and amount of received data. Informations
 are being displayed in a window on terminal. After terminating the
-connection it's data would be saved to a file. ppplicznik called with
+connection it's stats would be saved to a file. ppplicznik called with
 appriopriate command-line option will read it and show every or only
-the last-month connections saved in the file. Configuration is read
-from configuration file (default: /etc/ppplicznik.conf).
+the last-month connections saved in the file.
 
 %description -l pl
 ppplicznik to program, który w czasie trwania po³±czenia modemowego
 pozwoli Ci kontrolowaæ jego d³ugo¶æ oraz ilo¶æ pobieranych danych.
 Informacje prezentowane s± w okienku na terminalu tekstowym. Po
-zakoñczeniu po³±czenia dane o nim zostan± zapisane do pliku. ppplicznik
-wywo³any z odpowiedni± opcj± odczyta go i przedstawi wszystkie
-po³±czenia zapisane w pliku lub tylko te z danego miesi±ca. Parametry
-konfiguracyjne program odczytuje z pliku konfiguracyjnego.
+zakoñczeniu po³±czenia dane o nim zostan± zapisane do pliku.
+ppplicznik wywo³any z odpowiedni± opcj± odczyta go i przedstawi
+wszystkie po³±czenia zapisane w pliku lub tylko te z danego miesi±ca.
 
 %prep
 %setup -q
