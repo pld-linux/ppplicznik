@@ -1,7 +1,7 @@
 Summary:	A modem connection timer
 Summary(pl):	Licznik czasu po³±czenia modemowego
 Name:		ppplicznik
-Version:	0.3.0
+Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
@@ -9,6 +9,7 @@ Group(de):	Netzwerkwesen/Werkzeuge
 Group(pl):	Sieciowe/Narzêdzia
 URL:		http://gruesome.republika.pl/
 Source0:	http://gruesome.republika.pl/%{name}-%{version}.tar.bz2
+Patch0:		ppplicznik-ncurses-path.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-c++
@@ -35,13 +36,14 @@ wszystkie po³±czenia zapisane w pliku lub tylko te z danego miesi±ca.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-gettextize -f
-aclocal
-autoconf
-autoheader
-automake -a
+# gettextize -f
+# aclocal
+# autoconf
+# autoheader
+# automake -a
 %configure
 %{__make}
 
@@ -51,7 +53,7 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_datadir}/%{name}} \
 	$RPM_BUILD_ROOT{%{_mandir}/man1,%{_mandir}/pl/man1,%{_datadir}/locale/pl/LC_MESSAGES}
 
 install src/ppplicznik $RPM_BUILD_ROOT%{_bindir}
-install misc/dzwiek.wav $RPM_BUILD_ROOT%{_datadir}/ppplicznik
+install misc/sound.wav $RPM_BUILD_ROOT%{_datadir}/ppplicznik
 install misc/ppplicznik.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install misc/pl/ppplicznik.1 $RPM_BUILD_ROOT%{_mandir}/pl/man1
 sed s/"\/usr\/local\/share"/"\/usr\/share"/ < misc/ppplicznik.conf > $RPM_BUILD_ROOT%{_sysconfdir}/ppplicznik.conf
