@@ -5,10 +5,6 @@ Version:	1.0.0
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Group(de):	Netzwerkwesen/Werkzeuge
-Group(es):	Red/Utilitarios
-Group(pl):	Sieciowe/Narzêdzia
-Group(pt_BR):	Rede/Utilitários
 URL:		http://gruesome.republika.pl/
 Source0:	http://gruesome.republika.pl/%{name}-%{version}.tar.bz2
 Patch0:		ppplicznik-ncurses-path.patch
