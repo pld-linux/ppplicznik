@@ -10,8 +10,6 @@ Group(pl):	Sieciowe/Narzêdzia
 URL:		http://gruesome.republika.pl/
 Source0:	http://gruesome.republika.pl/%{name}-%{version}.tar.bz2
 Patch0:		ppplicznik-ncurses-path.patch
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	gcc-c++
 BuildRequires:	gettext-devel
 BuildRequires:	libstdc++-devel
