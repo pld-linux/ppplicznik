@@ -49,7 +49,6 @@ install misc/ppplicznik.1 $RPM_BUILD_ROOT%{_mandir}/man1
 sed s/"\/usr\/local\/share"/"\/usr\/share"/ < misc/ppplicznik.conf > $RPM_BUILD_ROOT%{_sysconfdir}/ppplicznik.conf
 install po/pl.gmo $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES/%{name}.mo
 
-gzip -9nf AUTHORS ChangeLog NEWS 
 
 %find_lang %{name}
 
@@ -58,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS 
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/ppplicznik
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/%{name}.conf
