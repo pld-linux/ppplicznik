@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS 
+%doc AUTHORS ChangeLog NEWS
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/ppplicznik
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/%{name}.conf
