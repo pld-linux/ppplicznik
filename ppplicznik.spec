@@ -5,8 +5,9 @@ Version:	0.3.0
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
+Group(de):	Netzwerkwesen/Werkzeuge
 Group(pl):	Sieciowe/Narzêdzia
-URL:		http://gruesome.republika.pl
+URL:		http://gruesome.republika.pl/
 Source0:	http://gruesome.republika.pl/%{name}-%{version}.tar.bz2
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -25,7 +26,6 @@ appriopriate command-line option will read it and show every or only
 the last-month connections saved in the file. Configuration is read
 from configuration file (default: /etc/ppplicznik.conf).
 
-
 %description -l pl
 ppplicznik to program, który w czasie trwania po³±czenia modemowego
 pozwoli Ci kontrolowaæ jego d³ugo¶æ oraz ilo¶æ pobieranych danych.
@@ -33,7 +33,7 @@ Informacje prezentowane s± w okienku na terminalu tekstowym. Po
 zakoñczeniu po³±czenia dane o nim zostan± zapisane do pliku. ppplicznik
 wywo³any z odpowiedni± opcj± odczyta go i przedstawi wszystkie
 po³±czenia zapisane w pliku lub tylko te z danego miesi±ca. Parametry
-konfiguracyjne program odczytuje z pliku konfiguracyjnego
+konfiguracyjne program odczytuje z pliku konfiguracyjnego.
 
 %prep
 %setup -q
@@ -44,7 +44,7 @@ aclocal
 autoconf
 autoheader
 automake -a
-%configure --prefix=/usr --sysconfdir=/etc
+%configure
 %{__make}
 
 %install
