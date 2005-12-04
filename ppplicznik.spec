@@ -9,7 +9,7 @@ Group:		Networking/Utilities
 #Source0:	http://gruesome.republika.pl/%{name}-%{version}.tar.bz2
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	4c1ca5cd243ee5a5c3958458aff800cd
-Patch0:		ppplicznik-ncurses-path.patch
+Patch0:		%{name}-ncurses-path.patch
 BuildRequires:	gettext-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel
@@ -62,6 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/ppplicznik
-%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/%{name}.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}.conf
 %{_mandir}/man1/*
 # %lang(pl) %{_mandir}/pl/man1/*
