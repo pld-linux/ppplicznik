@@ -1,5 +1,5 @@
 Summary:	A modem connection timer
-Summary(pl):	Licznik czasu po³±czenia modemowego
+Summary(pl.UTF-8):   Licznik czasu poÅ‚Ä…czenia modemowego
 Name:		ppplicznik
 Version:	1.0.0
 Release:	1
@@ -23,13 +23,13 @@ connection it's stats would be saved to a file. ppplicznik called with
 appriopriate command-line option will read it and show every or only
 the last-month connections saved in the file.
 
-%description -l pl
-ppplicznik to program, który w czasie trwania po³±czenia modemowego
-pozwoli Ci kontrolowaæ jego d³ugo¶æ oraz ilo¶æ pobieranych danych.
-Informacje prezentowane s± w okienku na terminalu tekstowym. Po
-zakoñczeniu po³±czenia dane o nim zostan± zapisane do pliku.
-ppplicznik wywo³any z odpowiedni± opcj± odczyta go i przedstawi
-wszystkie po³±czenia zapisane w pliku lub tylko te z danego miesi±ca.
+%description -l pl.UTF-8
+ppplicznik to program, ktÃ³ry w czasie trwania poÅ‚Ä…czenia modemowego
+pozwoli Ci kontrolowaÄ‡ jego dÅ‚ugoÅ›Ä‡ oraz iloÅ›Ä‡ pobieranych danych.
+Informacje prezentowane sÄ… w okienku na terminalu tekstowym. Po
+zakoÅ„czeniu poÅ‚Ä…czenia dane o nim zostanÄ… zapisane do pliku.
+ppplicznik wywoÅ‚any z odpowiedniÄ… opcjÄ… odczyta go i przedstawi
+wszystkie poÅ‚Ä…czenia zapisane w pliku lub tylko te z danego miesiÄ…ca.
 
 %prep
 %setup -q
