@@ -1,5 +1,5 @@
 Summary:	A modem connection timer
-Summary(pl.UTF-8):   Licznik czasu połączenia modemowego
+Summary(pl.UTF-8):	Licznik czasu połączenia modemowego
 Name:		ppplicznik
 Version:	1.0.0
 Release:	1
