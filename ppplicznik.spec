@@ -10,7 +10,7 @@ Group:		Networking/Utilities
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	4c1ca5cd243ee5a5c3958458aff800cd
 Patch0:		%{name}-ncurses-path.patch
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
